@@ -28,13 +28,16 @@ export default {
   },
   created(){
     // weui.alert('alert');
-    debugger;
-    weui.tab('#tab',{
-        defaultIndex: 1,
-        onChange: function(index){
-            console.log(index);
-        }
+    // debugger;
+    this.$nextTick(function(){
+        weui.tab('#tab',{
+            defaultIndex: 1,
+            onChange: function(index){
+                console.log(index);
+            }
+        });
     });
+
   }
 }
 </script>

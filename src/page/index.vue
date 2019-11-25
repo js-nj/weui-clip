@@ -84,6 +84,21 @@
           detail
         </a>
       </li>
+      <li>
+        <a @click="gotoQuestion">
+          question
+        </a>
+      </li>
+      <li>
+        <a @click="gotoAdjust">
+          adjust
+        </a>
+      </li>
+      <li>
+        <a @click="htmltoword">
+          转word
+        </a>
+      </li>
     </ul>
   </div>
 </template>
@@ -103,9 +118,26 @@ export default {
   },
   methods:{
     gotoDetail(){
-      weui.alert('go to detail');
+      // weui.alert('go to detail');
       this.$router.push({
         name:'detail'
+      })
+    },
+    gotoQuestion(){
+      this.$router.push({
+        name:'question'
+      })
+    },
+    gotoAdjust(){
+      this.$router.push({
+        name:'adjust'
+      })
+    },
+    htmltoword(){
+      debugger;
+      HTMLTOWORD({
+          translateDomSelector: '#app',
+          ignore: ['input', '.file-uploads', '[url]']
       })
     }
   }

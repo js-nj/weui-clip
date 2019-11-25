@@ -10,6 +10,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "exif-js": "^2.3.0",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
     "weui": "^2.1.3",
